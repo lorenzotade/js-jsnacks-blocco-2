@@ -1,6 +1,6 @@
-/* METODO CON FOR */
-
 /********** JSNACK 1 **********/
+
+/* METODO CON FOR */
 
 // inizializzo una variabile somma
 var sommaFor = 0;
@@ -43,3 +43,37 @@ if (numUtente % 2 == 0) {
 } else {
   console.log("Il tuo numero è dispari, non ci piace. Eccoti il successivo: " + (numUtente+1));
 }
+
+/********** JSNACK 3 **********/
+
+// creo due array e li popolo uno con nomi e l'altro con cognomi
+var nomi = ["Silvio", "Romano", "Mario", "Giuliano", "Gianfranco", "Ignazio", "Gianni", "Roberto", "Giulio", "Walter", "Giorgio", "Pier Luigi", "Umberto", "Roberto", "Massimo", "Francesco", "Enrico", "Emma", "Daniela", "Guido", "Renato", "Mara", "Giorgia", "Giuseppe"];
+
+var cognomi = ["Berlusconi", "Prodi", "Borghezio", "Ferrara", "Fini", "La Russa", "Letta", "Maroni", "Tremonti", "Weltroni", "Napolitano", "Bersani", "Bossi", "Calderoli", "D'Alema", "Rutelli", "Letta", "Bonino", "Santanché", "Bertolaso", "Brunetta", "Carfagna", "Meloni", "Cossiga"];
+
+// creo un ciclo for che giri tre volte
+for (var i = 0; i < 3; i++) {
+  // per ogni giro genero due numeri random con valore compreso tra 0 e lunghezza degli array
+  var indiceNomi = Math.floor(Math.random() * nomi.length);
+  var indiceCognomi = Math.floor(Math.random() * cognomi.length);
+
+  // per ogni giro stampo una coppia nome-cognome random
+  console.log("Invitato n. " + (i+1) + ": " + nomi[indiceNomi] + " " + cognomi[indiceCognomi]);
+}
+
+/********** JSNACK 4 **********/
+
+// creo un array di numeri interi
+var numeri = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var somma = 0;
+
+// creo un ciclo for che percorra l'array
+for (var i = 0; i < numeri.length; i++) {
+  // se l'indice dell'array è dispari allora somma il numero
+  if (i % 2) {
+    somma += numeri[i];
+  }
+}
+
+// stampo a video la somma
+console.log("La somma dei numeri con indice dispari nell'array è: " + somma);
